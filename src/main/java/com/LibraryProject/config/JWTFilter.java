@@ -1,4 +1,4 @@
-package org.techforumist.jwt.config;
+package com.LibraryProject.config;
 
 import java.io.IOException;
 import java.util.ArrayList;

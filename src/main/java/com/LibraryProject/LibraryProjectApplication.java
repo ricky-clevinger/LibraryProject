@@ -1,4 +1,4 @@
-package org.techforumist.jwt;
+package com.LibraryProject;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

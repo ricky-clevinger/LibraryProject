@@ -1,7 +1,7 @@
-package org.techforumist.jwt.repository;
+package com.LibraryProject.repository;
 
+import com.LibraryProject.domain.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.techforumist.jwt.domain.AppUser;
 
 /**
  * @author Sarath Muraleedharan

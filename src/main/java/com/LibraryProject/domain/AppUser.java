@@ -1,4 +1,4 @@
-package org.techforumist.jwt.domain;
+package com.LibraryProject.domain;
 
 import java.util.ArrayList;
 import java.util.Collection;

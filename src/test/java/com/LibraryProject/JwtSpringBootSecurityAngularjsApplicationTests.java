@@ -1,4 +1,4 @@
-package org.techforumist.jwt;
+package com.LibraryProject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package org.techforumist.jwt.web;
+package com.LibraryProject.web;
 
 import java.io.IOException;
 import java.security.Principal;
@@ -10,6 +10,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.LibraryProject.domain.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.techforumist.jwt.domain.AppUser;
-import org.techforumist.jwt.repository.AppUserRepository;
+import com.LibraryProject.repository.AppUserRepository;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
