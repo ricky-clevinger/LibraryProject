@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class JwtSpringBootSecurityAngularjsApplication {
+public class LibraryProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JwtSpringBootSecurityAngularjsApplication.class, args);
+		SpringApplication.run(LibraryProjectApplication.class, args);
 	}
 }
