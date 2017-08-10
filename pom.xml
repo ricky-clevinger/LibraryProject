@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>LibraryProject</name>
-	<description>Simple demo with angular js and spring security </description>
+	<description>Library Web Application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
