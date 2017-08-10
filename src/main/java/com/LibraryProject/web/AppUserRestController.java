@@ -19,8 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Rest controller for authentication and user details. All the web services of
  * this rest controller will be only accessible for ADMIN users only
- * 
- * @author Sarath Muraleedharan
+ *
  *
  */
 @RestController
@@ -34,7 +33,8 @@ public class AppUserRestController {
 	 * 
 	 * @return list of all AppUser
 	 */
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN'), hasRole('ROLE_LIBRARIAN')")
+
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	public List<AppUser> users() {
 		return appUserRepository.findAll();
@@ -47,7 +47,7 @@ public class AppUserRestController {
 	 *            appUser ID
 	 * @return appUser
 	 */
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN', hasRole('ROLE_LIBRARIAN')")
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
 	public ResponseEntity<AppUser> userById(@PathVariable Long id) {
 		AppUser appUser = appUserRepository.findOne(id);
@@ -64,7 +64,7 @@ public class AppUserRestController {
 	 * @param id
 	 * @return
 	 */
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN', hasRole('ROLE_LIBRARIAN')")
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<AppUser> deleteUser(@PathVariable Long id) {
 		AppUser appUser = appUserRepository.findOne(id);
@@ -87,7 +87,7 @@ public class AppUserRestController {
 	 * @param appUser
 	 * @return
 	 */
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN', hasRole('ROLE_LIBRARIAN')")
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	public ResponseEntity<AppUser> createUser(@RequestBody AppUser appUser) {
 		if (appUserRepository.findOneByUsername(appUser.getUsername()) != null) {
@@ -102,7 +102,7 @@ public class AppUserRestController {
 	 * @param appUser
 	 * @return modified appUser
 	 */
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@PreAuthorize("hasRole('ROLE_ADMIN', hasRole('ROLE_LIBRARIAN')")
 	@RequestMapping(value = "/users", method = RequestMethod.PUT)
 	public AppUser updateUser(@RequestBody AppUser appUser) {
 		if (appUserRepository.findOneByUsername(appUser.getUsername()) != null
